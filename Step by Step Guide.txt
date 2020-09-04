@@ -1,0 +1,30 @@
+create a new project
+    ionic start ionic-native-demo -capacitor
+
+    select the tab based project. 
+
+    cd ionic-native-demo 
+
+Then, initialize capacitor in this project
+    npx cap init 
+
+        Note: you will find the following in the command prompt 
+        Add platforms using "npx cap add":
+
+        npx cap add android
+        npx cap add ios
+        npx cap add electron
+
+        Follow the Developer Workflow guide to get building:
+        https://capacitorjs.com/docs/basics/workflow
+
+
+Then, exec 
+    ionic build
+
+Then, add the android platform to the project 
+    npx cap add android
+
+Then, open the project in vs code 
+    
+    ionic serve
