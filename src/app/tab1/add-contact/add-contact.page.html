@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Create New Contact</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <form #f="ngForm" (ngSubmit)="addContactHandler(f)">
+      <ion-list>
+        <ion-item>
+          <ion-label position="stacked">First Name</ion-label>
+          <ion-input type='text' ngModel name='firstName' required></ion-input>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-item>
+          <ion-label position="stacked">Last Name</ion-label>
+          <ion-input type='text' ngModel name='lastName'></ion-input>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-item>
+          <ion-label position="stacked">Phone Number</ion-label>
+          <ion-input type='tel' ngModel name='phone' required></ion-input>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-item>
+          <ion-label position="stacked">E-Mail</ion-label>
+          <ion-input type='email' ngModel name='email' required email></ion-input>
+        </ion-item>
+      </ion-list>
+      <ion-button type='submit' expand="block">Save to Contacts</ion-button>
+    </form>
+  </ion-card>
+</ion-content>

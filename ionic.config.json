@@ -1,7 +1,8 @@
 {
   "name": "ionic-native-demo",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }

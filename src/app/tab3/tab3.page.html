@@ -13,5 +13,37 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Native Features page"></app-explore-container>
+  <!-- geolocation starts -->
+  <ion-item>
+    <ion-label>Access Geolocation</ion-label>
+    <ion-button (click)="getCurrentPosition()" expand="block">
+      Access Geolocation
+    </ion-button>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Your position is: </ion-label>
+    <ion-text>
+      {{loc?.coords?.latitude}} and {{loc?.coords?.longitude}}
+    </ion-text>
+  </ion-item>
+  <!-- geolocation ends -->
+
+  <!-- send sms -->
+  <ion-item>
+    <ion-label>SMS</ion-label>
+    <ion-button (click)="sendSMS()" expand="block">
+      Send SMS
+    </ion-button>
+  </ion-item>
+
+  <!-- find wifi hotspots -->
+  <ion-item>
+    <ion-label>Wifi Hotspots</ion-label>
+    <ion-button (click)="findWifi()" expand="block">
+      Find Wifi
+    </ion-button>
+  </ion-item>
+
+  
 </ion-content>

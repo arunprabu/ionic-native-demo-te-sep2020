@@ -1,5 +1,5 @@
 create a new project
-    ionic start ionic-native-demo -capacitor
+    ionic start ionic-native-app --capacitor
 
     select the tab based project. 
 
@@ -26,5 +26,50 @@ Then, add the android platform to the project
     npx cap add android
 
 Then, open the project in vs code 
-    
+
     ionic serve
+
+===
+Let's first implement camera and photo taking app.
+    Refer tab2.html and ts 
+
+    And after writing all the lines of code you will get an error in console when you click the photo icon.
+    Refer the link: https://capacitorjs.com/docs/pwa-elements
+    Then exec,
+    npm install @ionic/pwa-elements
+
+    Then, in main.ts,
+    write the following lines before environment related if condition.
+
+    import { defineCustomElements } from '@ionic/pwa-elements/loader';
+    // Call the element loader after the platform has been bootstrapped
+    defineCustomElements(window);
+
+
+====
+Now test the app in android studio emulator (after code change - try the following)
+    exec the following commands
+        ionic build  // web assets 'www' folder would be created.
+        npx cap sync    // synchronizes ionic and native app -- copies  web assets 'www' folder to android public assets 
+        npx cap open android
+        
+Then setup SDK for android studio and download emulator 
+and then run the app after switching on emulator 
+
+Preparing the build
+====
+https://capacitorjs.com/docs/basics/configuring-your-app
+
+
+Deploying to the Play store and App Store
+===
+https://ionicframework.com/docs/deployment/play-store
+https://ionicframework.com/docs/deployment/app-store
+
+
+For more 
+https://ionicframework.com/docs/developing/android
+
+
+READ MORE:
+https://capacitorjs.com/docs/apis/camera#example-guides
